@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Icons Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+    <!-- Pure Css -->
+    <link rel="stylesheet" href="../Styles/Product.css">
+
+    <!-- Document Icon -->
+    <link rel="shortcut icon" href="../Imgs/logo_lego.jpg" type="image/x-icon">
+    <title>Product Title</title>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-dark">
+        <div class="nav d-flex py-1 justify-content-between container ">
+            <div class="d-flex">
+                <a class="nav-link active text-white" aria-current="page" href="../index.html">
+                    <img src="../Imgs/logo_lego.jpg" width="30px" alt=""> Home
+                </a>
+                <a class="nav-link text-white" href="./Products.html">Products</a>
+                <a class="nav-link text-white" href="../html/Cart.html">Cart <span id="cart-nav" class="bg-secondary p-1 rounded-1">0</span></a>
+            </div>
+            <button type="button" class="btn btn-outline-white" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-person-circle"></i>  Log In</button>
+        </div>
+    </nav>
+    <!-- Product Info -->
+    <main id="Procut" class="container">
+        <div class="row mt-5">
+            <div class="col-12 col-md-8 mb-4">
+                <div class="Procut__Imgs ">
+                    <div class="Thumbnil__Imgs">
+                        <button onclick="ShowImg(this)">
+                            <img class="Thumbnil" src="" alt="">
+                        </button>
+                        <button onclick="ShowImg(this)">
+                            <img class="Thumbnil" src="" alt="">
+                        </button>
+                        <button onclick="ShowImg(this)">
+                            <img class="Thumbnil" src="" alt="">
+                        </button>
+                        <button onclick="ShowImg(this)">
+                            <img class="Thumbnil" src="" alt="">
+                        </button>
+                    </div>
+                    <img src="../Imgs/produit_newyork_0.jpeg" alt="" class="big__Img">
+                </div>
+            </div>
+            <div class="col col-md-4 mt-4">
+                <div class="Product__Info">
+                    <h5 class="Category">Product Quatigori</h5>
+                    <h1 class="Name">Product Name</h1>
+                    <hr>
+                    <h2 class="price right-text">Price: 555£</h2>
+                    <div id="onStock" class="alert alert-success right-text">
+                        On Stock
+                    </div>
+                    <hr class="card-btns">
+                    <div class="col mb-3 right-text">
+                        <button onclick="minecQuantite()" type="button" class="card-btns btn btn-outline-secondary">-</button>
+                        <button id="quantite" type="button" class="card-btns btn btn-secondary opacity-75">200</button>
+                        <button onclick="addQuantite() " type="button" class="card-btns btn btn-outline-secondary">+</button>
+                        <p id="outOfStock" class="text-danger hide">You Have in cart more than what we have in Stock</p>
+                    </div>
+                    <div class="col right-text">
+                        <button onclick="addToCart()" class="card-btns btn btn-primary">Add To Cart <i class="bi bi-cart-plus-fill"></i></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row my-5">
+            <div class="col-12 col-md-8">
+                <h2>Description</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, est ipsam provident delectus voluptatem aspernatur perferendis dolorem quibusdam sit. Sit quos sint placeat alias harum accusantium veritatis, modi exercitationem blanditiis
+                    suscipit cupiditate aliquid voluptas eveniet.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ad quaerat consequuntur necessitatibus esse, praesentium molestias quod modi et, beatae cupiditate possimus illo assumenda ratione fuga accusamus voluptates nam ipsum quo.
+                    Dolores nihil quae vel illum atque iusto tenetur tempora repellendus necessitatibus ut, in rem numquam optio dignissimos delectus provident! Possimus dolor consectetur ad ipsam labore reiciendis quae ducimus rem maxime, nulla numquam!
+                    Culpa autem quidem consequatur saepe ratione enim pariatur rem nostrum sapiente distinctio!</p>
+                <h2>Specifite</h2>
+                <ul id="Specifite">
+
+                </ul>
+            </div>
+            <div class="col-12 col-md-4">
+                <h2>Comments</h2>
+                <div class="row" id="Comments">
+
+                </div>
+                <div class="row mt-2">
+                    <h5>Add Comment</h5>
+                    <div class="input-group">
+                        <input class="form-control" id="comment_Input" type="text">
+                        <button onclick="addCommetn()" class="btn btn-primary">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h2 class="my-5">Recomendation</h2>
+            <div class="Recomendation-Cards">
+                <div class="row row-cols-1 row-cols-md-4 g-4 mb-4 " id="recomendation">
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-5 card-footer ">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h5><strong>LEGO WebStore</strong></h5>
+                    <p class="text-muted">Maison de la Recherche Blaise Pascal</p>
+                    <p class="text-muted">50 rue Ferdinand Buisson</p>
+                    <p class="text-muted">62228, Calais.</p>
+                </div>
+                <div>
+                    <img width="50px" src="../Imgs/logo_lego.jpg" alt="">
+                    <p class="text-muted">WebStore</p>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row-10">
+                        <input type="text" placeholder="User Name" class="form-control">
+                    </div>
+                    <div class="row-10 mt-3">
+                        <input type="password" placeholder="PassWord" class="form-control">
+                    </div>
+                    <div class="row-10 mt-3">
+                        <button type="button" class="btn btn-secondary btn-block col-12" data-dismiss="modal">log in</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="./SignIn.html" class="btn text-white btn-primary btn-block col">sign in</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/navCard.js"></script>
+    <script src="../js/product.js"></script>
+    <script src="../js/productREcommendation.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 77px;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+        color: inherit;
+    }
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+// Add As Bootstrap
+.btn-outline-white {
+    border: 1px solid #fff;
+    color: #fff;
+    &:hover {
+        background-color: #fff;
+    }
+}
+
+.btn-block {
+    width: 100%;
+}
+
+// .card:hover {
+//     overflow: hidden;
+//     // background-color: rgb(43, 43, 43);
+//     // color: #fff;
+//     .card-img-top {
+//         width: 105%;
+//     }
+// }
+.mutedBtn {
+    &:hover {
+        cursor: auto;
+    }
+}
+
+.right-text {
+    text-align: right;
+}
+
+.width-content {
+    max-width: fit-content;
+}
+
+.ml-auto {
+    display: block;
+    margin-left: auto;
+}
+
+.mt-auto {
+    display: block;
+    margin-top: auto;
+}
+
+.opacity-hover {
+    opacity: .5;
+    &:hover,
+    &:focus {
+        opacity: .9;
+    }
+}
+
+.week {
+    border-bottom: 1px solid red;
+    &:hover,
+    &:focus {
+        border-bottom: 1px solid red;
+    }
+}
+
+.meduim {
+    border-bottom: 1px solid greenyellow;
+    ;
+    &:hover,
+    &:focus {
+        border-bottom: 1px solid greenyellow;
+    }
+}
+
+.fort {
+    border-bottom: 1px solid green;
+    &:hover,
+    &:focus {
+        border-bottom: 1px solid green;
+    }
+}
+
+.valid {
+    border-bottom: 1px solid green;
+    &:hover,
+    &:focus {
+        border-bottom: 1px solid green;
+    }
+}

@@ -1,0 +1,223 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 77px;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.btn-outline-white {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.btn-outline-white:hover {
+  background-color: #fff;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.mutedBtn:hover {
+  cursor: auto;
+}
+
+.right-text {
+  text-align: right;
+}
+
+.width-content {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.ml-auto {
+  display: block;
+  margin-left: auto;
+}
+
+.mt-auto {
+  display: block;
+  margin-top: auto;
+}
+
+.opacity-hover {
+  opacity: .5;
+}
+
+.opacity-hover:hover, .opacity-hover:focus {
+  opacity: .9;
+}
+
+.week {
+  border-bottom: 1px solid red;
+}
+
+.week:hover, .week:focus {
+  border-bottom: 1px solid red;
+}
+
+.meduim {
+  border-bottom: 1px solid greenyellow;
+}
+
+.meduim:hover, .meduim:focus {
+  border-bottom: 1px solid greenyellow;
+}
+
+.fort {
+  border-bottom: 1px solid green;
+}
+
+.fort:hover, .fort:focus {
+  border-bottom: 1px solid green;
+}
+
+.valid {
+  border-bottom: 1px solid green;
+}
+
+.valid:hover, .valid:focus {
+  border-bottom: 1px solid green;
+}
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#hero {
+  height: 90vh;
+  max-height: 900px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+#hero .nav {
+  width: 70%;
+  min-width: 70ch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  z-index: 500;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+}
+
+#hero .nav button {
+  background: transparent;
+  font-size: 2rem;
+  -webkit-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in;
+  color: #fff;
+}
+
+#hero #Carousels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+#hero #Carousels .Carousel {
+  min-width: 100%;
+  background-color: #888;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+  background-size: cover;
+  background-position: center;
+}
+
+#hero #Carousels .Carousel .content {
+  position: relative;
+  z-index: 0;
+  color: #fff;
+  width: 100%;
+}
+
+#hero #Carousels .Carousel .content::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  inset: 0 0 0 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  -webkit-transform: translate(0, -33%);
+          transform: translate(0, -33%);
+}
+
+#hero #Carousels .Carousel__title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #0d6efd;
+}
+
+#hero #Carousels .Carousel__descrption {
+  width: calc(100% - 6rem);
+  max-width: 70ch;
+  margin: 0 auto;
+}
+
+#hero #Carousels .Carousel__cull-to-action {
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+#hero #Carousels .Carousel-1 {
+  background-image: url(../Imgs/lego-architecture-skyline-interior-decorating-02.jpg);
+}
+/*# sourceMappingURL=main.css.map */

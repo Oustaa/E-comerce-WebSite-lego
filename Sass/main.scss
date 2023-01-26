@@ -1,0 +1,81 @@
+@import './resets';
+// Hero Section
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#hero {
+    height: 90vh;
+    max-height: 900px;
+    position: relative;
+    margin-bottom: 50px;
+    .nav {
+        width: 70%;
+        min-width: 70ch;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        z-index: 500;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        button {
+            background: transparent;
+            font-size: 2rem;
+            transition: opacity 200ms ease-in;
+            color: #fff;
+        }
+    }
+    #Carousels {
+        display: flex;
+        overflow: hidden;
+        .Carousel {
+            min-width: 100%;
+            background-color: #888;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: transform 500ms;
+            background-size: cover;
+            background-position: center;
+            .content {
+                position: relative;
+                z-index: 0;
+                color: #fff;
+                width: 100%;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background-color: rgba($color: #000000, $alpha: .7);
+                    inset: 0 0 0 0;
+                    width: 100vw;
+                    height: 100vh;
+                    z-index: -1;
+                    transform: translate(0, -33%);
+                }
+            }
+            &__title {
+                font-size: 4rem;
+                font-weight: bold;
+                color: #0d6efd;
+            }
+            &__descrption {
+                width: calc(100% - 6rem);
+                max-width: 70ch;
+                margin: 0 auto;
+            }
+            &__cull-to-action {
+                padding: 10px 20px;
+                border-radius: 10px;
+            }
+            &-1 {
+                background-image: url(../Imgs/lego-architecture-skyline-interior-decorating-02.jpg);
+            }
+        }
+    }
+}
